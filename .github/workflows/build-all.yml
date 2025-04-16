@@ -43,12 +43,12 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '11'
-        cache: 'gradle'
+        #cache: 'gradle'
       
     - uses: actions/setup-node@v2
       with:
         node-version: '20'
-        cache: 'yarn'
+        #cache: 'yarn'
         
     - name: Bump version
       id: bump_version
