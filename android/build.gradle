@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        buildToolsVersion = "31.0.0"
+        minSdkVersion = 29
+        compileSdkVersion = 31
+        targetSdkVersion = 31
+        ndkVersion = "26.3.11579264"
+        kotlinVersion = '1.5.0' // Updated Kotlin version to match the plugin version
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath('com.android.tools.build:gradle:7.0.4')
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
+        classpath("de.undercouch:gradle-download-task:4.1.2")
+        classpath("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
+    }
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+    repositories {
+        // Remove exclusiveContent if not needed
+        mavenLocal()
+        maven {
+            url("$rootDir/../node_modules/react-native/android")
+        }
+        maven {
+            url("$rootDir/../node_modules/jsc-android/dist")
+        }
+        mavenCentral {
+            content {
+                excludeGroup "com.facebook.react"
+            }
+        }
+        jcenter()
+        google()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
