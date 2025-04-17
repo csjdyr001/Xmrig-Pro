@@ -1,11 +1,11 @@
-package com.xmrigforandroid.workers
+package com.cfks.xmrig.pro.workers
 
 import android.content.Context
 import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.xmrigforandroid.events.ThermalEvent
-import com.xmrigforandroid.utils.CPUTemperatureHelper
+import com.cfks.xmrig.pro.events.ThermalEvent
+import com.cfks.xmrig.pro.utils.CPUTemperatureHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext

@@ -1,4 +1,4 @@
-package com.xmrigforandroid.data.serialization
+package com.cfks.xmrig.pro.data.serialization
 
 import androidx.annotation.Keep
 import com.facebook.infer.annotation.FalseOnNull

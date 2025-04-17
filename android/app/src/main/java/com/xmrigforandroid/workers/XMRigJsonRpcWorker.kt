@@ -1,4 +1,4 @@
-package com.xmrigforandroid.workers
+package com.cfks.xmrig.pro.workers
 
 import android.content.Context
 import android.util.Log

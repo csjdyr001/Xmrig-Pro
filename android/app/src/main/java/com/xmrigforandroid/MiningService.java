@@ -1,4 +1,4 @@
-package com.xmrigforandroid;
+package com.cfks.xmrig.pro;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -12,11 +12,11 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
 
-import com.xmrigforandroid.data.serialization.XMRigFork;
-import com.xmrigforandroid.events.MinerStartEvent;
-import com.xmrigforandroid.events.MinerStopEvent;
-import com.xmrigforandroid.events.StdoutEvent;
-import com.xmrigforandroid.utils.ProcessExitDetector;
+import com.cfks.xmrig.pro.data.serialization.XMRigFork;
+import com.cfks.xmrig.pro.events.MinerStartEvent;
+import com.cfks.xmrig.pro.events.MinerStopEvent;
+import com.cfks.xmrig.pro.events.StdoutEvent;
+import com.cfks.xmrig.pro.utils.ProcessExitDetector;
 
 import org.greenrobot.eventbus.EventBus;
 import java.io.BufferedReader;
@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 public class MiningService extends Service {
 
     private static final String LOG_TAG = "MiningSvc";
-    private static final String NOTIFICATION_CHANNEL_ID = "com.xmrigforandroid.service";
+    private static final String NOTIFICATION_CHANNEL_ID = "com.cfks.xmrig.pro.service";
     private static final String NOTIFICATION_CHANNEL_NAME = "XMRig Service";
     private static final int NOTIFICATION_ID = 200;
     private Notification.Builder notificationbuilder;
@@ -49,11 +49,11 @@ public class MiningService extends Service {
 
         notificationbuilder =
                 new Notification.Builder(this, NOTIFICATION_CHANNEL_ID)
-                        .setContentTitle("XMRig for Android")
-                        .setContentText("XMRig for Android Service")
+                        .setContentTitle("Xmrig Pro")
+                        .setContentText("Xmrig Pro Service")
                         .setSmallIcon(R.mipmap.ic_launcher)
                         .setContentIntent(pendingIntent)
-                        .setTicker("XMRig for Android Service")
+                        .setTicker("Xmrig Pro Service")
                         .setOngoing(true)
                         .setOnlyAlertOnce(true);
 

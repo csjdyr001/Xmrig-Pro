@@ -1,4 +1,4 @@
-package com.xmrigforandroid;
+package com.cfks.xmrig.pro;
 
 import android.app.Application;
 

@@ -41,7 +41,7 @@
 #-keepattributes InnerClasses # Needed for `getDeclaredClasses`.
 #-if @kotlinx.serialization.Serializable class
 -if @kotlinx.serialization.Serializable class
-com.xmrigforandroid.data.serialization.Configuration
+com.cfks.xmrig.pro.data.serialization.Configuration
 {
     static **$* *;
 }

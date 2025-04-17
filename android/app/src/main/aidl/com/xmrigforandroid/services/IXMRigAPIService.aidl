@@ -1,5 +1,5 @@
 // IXMRigAPIService.aidl
-package com.xmrigforandroid.services;
+package com.cfks.xmrig.pro.services;
 
 interface IXMRigAPIService {
     void startSummaryUpdates();

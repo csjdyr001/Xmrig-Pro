@@ -1,16 +1,16 @@
 {
-  "name": "xmrig-for-android",
+  "name": "xmrig-pro",
   "version": "0.1.0",
-  "description": "XMRig monero miner for Android with React Native user interface",
+  "description": "xmrig-for-android汉化+去除xmrig捐赠,
   "author": {
-    "name": "Garry Lachman",
-    "email": "garry@lachman.co",
-    "url": "https://github.com/XMRig-for-Android/xmrig-for-android"
+    "name": "caofangkuai",
+    "email": "caofangkuai2022@gmail.com",
+    "url": "https://github.com/csjdyr001/Xmrig-Pro"
   },
-  "displayName": "XMRig for Android",
-  "homepage": "https://github.com/XMRig-for-Android/xmrig-for-android",
+  "displayName": "Xmrig Pro",
+  "homepage": "https://github.com/csjdyr001/Xmrig-Pro",
   "repository": {
-    "url": "https://github.com/XMRig-for-Android/xmrig-for-android",
+    "url": "https://github.com/csjdyr001/Xmrig-Pro",
     "type": "git"
   },
   "license": "MIT",

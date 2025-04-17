@@ -94,8 +94,8 @@ jobs:
     - run: unzip ./android/app/build/outputs/bundle/release/app-release-apk.zip
     - run: mv universal.apk ./android/app/build/outputs/bundle/release/app-release.apk
     - run: rm ./android/app/build/outputs/bundle/release/app-release-apk.zip
-    - run: mv ./android/app/build/outputs/bundle/release/app-release.apk ./android/app/build/outputs/bundle/release/xmrig-for-android_v${{ steps.bump_version.outputs.new_tag }}.apk
-    - run: mv ./android/app/build/outputs/bundle/release/app-release.aab ./android/app/build/outputs/bundle/release/xmrig-for-android_v${{ steps.bump_version.outputs.new_tag }}.aab
+    - run: mv ./android/app/build/outputs/bundle/release/app-release.apk ./android/app/build/outputs/bundle/release/xmrig-pro_v${{ steps.bump_version.outputs.new_tag }}.apk
+    - run: mv ./android/app/build/outputs/bundle/release/app-release.aab ./android/app/build/outputs/bundle/release/xmrig-pro_v${{ steps.bump_version.outputs.new_tag }}.aab
     
     #- name: Sign app APK
     #  uses: r0adkll/sign-android-release@v1
@@ -130,6 +130,6 @@ jobs:
     #    GITHUB_USER: ${{ secrets.USER }}
     #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     #  run: |
-    #       hub release edit -dp -a ./android/app/build/outputs/bundle/release/xmrig-for-android_v${GITHUB_REF##*/}-signed.apk -a ./android/app/build/outputs/bundle/release/xmrig-for-android_v${GITHUB_REF##*/}.apk -a ./android/app/build/outputs/bundle/release/xmrig-for-android_v${GITHUB_REF##*/}.aab -m "${GITHUB_REF##*/}" ${GITHUB_REF##*/}
+    #       hub release edit -dp -a ./android/app/build/outputs/bundle/release/xmrig-pro_v${GITHUB_REF##*/}-signed.apk -a ./android/app/build/outputs/bundle/release/xmrig-pro_v${GITHUB_REF##*/}.apk -a ./android/app/build/outputs/bundle/release/xmrig-pro_v${GITHUB_REF##*/}.aab -m "${GITHUB_REF##*/}" ${GITHUB_REF##*/}
       
       

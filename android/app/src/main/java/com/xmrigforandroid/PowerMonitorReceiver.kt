@@ -1,12 +1,12 @@
-package com.xmrigforandroid
+package com.cfks.xmrig.pro
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.xmrigforandroid.events.PowerEvent
-import com.xmrigforandroid.events.PowerEventAction
-import com.xmrigforandroid.events.StdoutEvent
+import com.cfks.xmrig.pro.events.PowerEvent
+import com.cfks.xmrig.pro.events.PowerEventAction
+import com.cfks.xmrig.pro.events.StdoutEvent
 import org.greenrobot.eventbus.EventBus
 import android.os.BatteryManager
 

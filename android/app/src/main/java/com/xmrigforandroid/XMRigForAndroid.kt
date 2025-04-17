@@ -1,4 +1,4 @@
-package com.xmrigforandroid
+package com.cfks.xmrig.pro
 
 import android.content.*
 import android.os.FileObserver
@@ -7,8 +7,8 @@ import android.os.RemoteException
 import android.util.Log
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
-import com.xmrigforandroid.data.serialization.Configuration
-import com.xmrigforandroid.utils.XMRigConfigBuilder
+import com.cfks.xmrig.pro.data.serialization.Configuration
+import com.cfks.xmrig.pro.utils.XMRigConfigBuilder
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import org.greenrobot.eventbus.EventBus
@@ -21,11 +21,11 @@ import java.util.*
 import android.os.BatteryManager
 
 import android.content.Context.BATTERY_SERVICE
-import com.xmrigforandroid.events.*
-import com.xmrigforandroid.services.IXMRigAPIService
-import com.xmrigforandroid.services.ThermalService
-import com.xmrigforandroid.services.XMRigAPIService
-import com.xmrigforandroid.utils.CPUTemperatureHelper
+import com.cfks.xmrig.pro.events.*
+import com.cfks.xmrig.pro.services.IXMRigAPIService
+import com.cfks.xmrig.pro.services.ThermalService
+import com.cfks.xmrig.pro.services.XMRigAPIService
+import com.cfks.xmrig.pro.utils.CPUTemperatureHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.newSingleThreadContext
@@ -45,20 +45,20 @@ class XMRigForAndroid(context: ReactApplicationContext) : ReactContextBaseJavaMo
                 Log.d("className", className.className)
             };
             when(className?.className) {
-                "com.xmrigforandroid.MiningService" -> {
+                "com.cfks.xmrig.pro.MiningService" -> {
                     miningService = IMiningService.Stub.asInterface(service)
                 }
-                "com.xmrigforandroid.services.XMRigAPIService" -> {
+                "com.cfks.xmrig.pro.services.XMRigAPIService" -> {
                     xmrigAPIService = IXMRigAPIService.Stub.asInterface(service)
                 }
             }
         }
         override fun onServiceDisconnected(className: ComponentName?) {
             when(className?.className) {
-                "com.xmrigforandroid.MiningService" -> {
+                "com.cfks.xmrig.pro.MiningService" -> {
                     miningService = null
                 }
-                "com.xmrigforandroid.services.XMRigAPIService" -> {
+                "com.cfks.xmrig.pro.services.XMRigAPIService" -> {
                     xmrigAPIService = null
                 }
             }

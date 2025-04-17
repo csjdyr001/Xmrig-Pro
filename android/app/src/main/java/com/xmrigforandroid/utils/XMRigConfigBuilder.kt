@@ -1,12 +1,12 @@
-package com.xmrigforandroid.utils
+package com.cfks.xmrig.pro.utils
 
 import android.content.Context
 import android.util.Base64
 import android.util.Log
-import com.xmrigforandroid.data.serialization.Configuration
-import com.xmrigforandroid.data.serialization.ConfigurationMode
-import com.xmrigforandroid.data.serialization.SimpleConfigurationPropertiesCPU
-import com.xmrigforandroid.data.serialization.SimpleConfigurationPropertiesPool
+import com.cfks.xmrig.pro.data.serialization.Configuration
+import com.cfks.xmrig.pro.data.serialization.ConfigurationMode
+import com.cfks.xmrig.pro.data.serialization.SimpleConfigurationPropertiesCPU
+import com.cfks.xmrig.pro.data.serialization.SimpleConfigurationPropertiesPool
 import java.io.*
 import java.lang.RuntimeException
 import java.lang.StringBuilder

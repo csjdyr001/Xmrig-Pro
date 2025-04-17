@@ -1,4 +1,4 @@
-package com.xmrigforandroid.events
+package com.cfks.xmrig.pro.events
 
 enum class PowerEventAction(val value: String) {
     BATTERY_CHANGED("batteryChanged"),

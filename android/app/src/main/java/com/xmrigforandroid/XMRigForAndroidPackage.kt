@@ -1,4 +1,4 @@
-package com.xmrigforandroid
+package com.cfks.xmrig.pro
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

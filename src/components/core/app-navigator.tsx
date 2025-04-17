@@ -46,7 +46,7 @@ export const AppNavigator:React.FC<ViewProps> = () => {
         component={AppTabs}
         // eslint-disable-next-line react/jsx-one-expression-per-line
         options={{
-          title: 'XMRig for Android',
+          title: 'Xmrig Pro',
           headerTitleContainerStyle: { marginLeft: 10 },
           headerRightContainerStyle: { marginRight: 10 },
           headerRight: () => (
@@ -62,7 +62,7 @@ export const AppNavigator:React.FC<ViewProps> = () => {
         name="配置"
         component={ConfigurationEditScreen}
         getId={({ params }: any) => params.id}
-        options={{ title: 'XMRig for Android | 配置' }}
+        options={{ title: 'Xmrig Pro | 配置' }}
       />
     </Stack.Navigator>
   );

@@ -1,4 +1,4 @@
-package com.xmrigforandroid.utils;
+package com.cfks.xmrig.pro.utils;
 
 import java.util.ArrayList;
 import java.util.EventListener;

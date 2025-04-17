@@ -1,4 +1,4 @@
-package com.xmrigforandroid.services
+package com.cfks.xmrig.pro.services
 
 import android.app.Service
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.os.CountDownTimer
 import android.os.IBinder
 import android.util.Log
 import androidx.work.*
-import com.xmrigforandroid.workers.XMRigJsonRpcWorker
-import com.xmrigforandroid.workers.XMRigSummaryUpdateWorker
+import com.cfks.xmrig.pro.workers.XMRigJsonRpcWorker
+import com.cfks.xmrig.pro.workers.XMRigSummaryUpdateWorker
 import okhttp3.OkHttpClient
 
 class XMRigAPIService : Service() {

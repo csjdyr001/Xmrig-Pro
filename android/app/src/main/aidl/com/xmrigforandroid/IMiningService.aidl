@@ -1,5 +1,5 @@
 // IMiningService.aidl
-package com.xmrigforandroid;
+package com.cfks.xmrig.pro;
 
 interface IMiningService {
     /**
