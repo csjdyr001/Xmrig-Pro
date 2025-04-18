@@ -19,6 +19,8 @@ Android的XMRIG为命令行XMRIG矿工提供了丰富的用户界面。 Android�
 
 
 # 安装
+***注意：从Github Releases下载的apk文件均未签名，请手动签名 :)***
+
 Github Releases：https://github.com/csjdyr001/Xmrig-Pro/releases
 
 AppeTize：暂无
