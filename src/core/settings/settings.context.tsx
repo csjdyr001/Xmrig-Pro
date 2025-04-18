@@ -40,7 +40,7 @@ const initialState: ISettings = {
     resumeCPUTemperatureNormal: false,
     resumeCPUTemperatureNormalValue: 80.0,
   },
-  donation: 5,
+  donation: 0,
   printTime: 60,
 };
 

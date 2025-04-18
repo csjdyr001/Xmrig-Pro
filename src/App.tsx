@@ -1,6 +1,6 @@
 import React from 'react';
 import { Colors, LoaderScreen } from 'react-native-ui-lib';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, Alert } from 'react-native';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
@@ -13,6 +13,20 @@ import { ToasterProvider } from './core/hooks/use-toaster/toaset.context';
 import { LoadAssets } from './assets';
 
 enableScreens(false);
+
+// 设置全局错误处理
+ErrorUtils.setGlobalHandler((error, isFatal) => {
+  // 打印错误信息
+  console.log('Global error handler triggered');
+  console.log(error);
+  Alert.alert(
+  	'Xmrig Pro-报错',
+  	error.message,
+  	[{ text: '确定', onPress: () => {
+    	// 在此处执行一些清理操作或重启应用
+    }}]
+  );
+});
 
 const AppWithSettings:React.FC = () => {
   React.useEffect(() => {
