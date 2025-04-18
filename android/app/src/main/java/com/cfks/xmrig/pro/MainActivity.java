@@ -6,6 +6,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.app.*;
+import android.content.*;
+import android.graphics.drawable.*;
+import android.graphics.*;
+import android.os.*;
+import android.view.*;
+import android.widget.*;
+import java.io.*;
+import java.util.*;
 
 import org.devio.rn.splashscreen.SplashScreen;
 
@@ -33,5 +42,11 @@ public class MainActivity extends ReactActivity {
     batterFilters.addAction(Intent.ACTION_POWER_CONNECTED);
     batterFilters.addAction(Intent.ACTION_POWER_DISCONNECTED);
     registerReceiver(new PowerMonitorReceiver(), batterFilters);
+    
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	builder.setTitle("Xmrig Pro");
+	builder.setMessage("该软件仅供交流学习，汉化By caofangkuai");
+	builder.setPositiveButton("确定", null);
+	builder.show();
   }
 }
