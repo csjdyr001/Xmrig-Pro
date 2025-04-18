@@ -277,7 +277,7 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
       </View>
       <View flex paddingV-10>
         <View flex row spread paddingB-5 marginB-10 style={styles.sectionDiv}>
-          <Text text60>Hashrate</Text>
+          <Text text60>哈希率</Text>
         </View>
         <View flex row>
           <RenderHashrateGrid />

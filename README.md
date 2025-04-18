@@ -21,13 +21,13 @@ Android的XMRIG为命令行XMRIG矿工提供了丰富的用户界面。 Android�
 # 安装
 Github Releases：https://github.com/csjdyr001/Xmrig-Pro/releases
 
-AppeTize：无
+AppeTize：暂无
 
 # 布局
 
-没有任何
+暂无
 
 ![image](https://user-images.githubusercontent.com/97060076/148125819-b093ef76-b7ec-455f-866f-a489b5b53e59.png)
 
 ### 捐赠
-DOGE：DGJZZR4MLAJMYZ5I7WX4PUJQDPMMNJH1SP
+DOGE: DGjzZr4MLAjMyz5i7Wx4puJqdpmmnjh1sP

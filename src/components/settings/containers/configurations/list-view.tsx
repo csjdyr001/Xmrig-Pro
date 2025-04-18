@@ -68,7 +68,7 @@ export const ConfigurationsListView:React.FC<ConfigurationsListViewProps> = ({
               </ListItem>
             </View>
           )}
-          keyExtractor={(item: Configuration) => `配置-${item.id}`}
+          keyExtractor={(item: Configuration) => `configution-${item.id}`}
         />
       </View>
     </Card>

@@ -59,7 +59,7 @@ export const AppNavigator:React.FC<ViewProps> = () => {
         }}
       />
       <Stack.Screen
-        name="配置"
+        name="Configuration"
         component={ConfigurationEditScreen}
         getId={({ params }: any) => params.id}
         options={{ title: 'Xmrig Pro | 配置' }}

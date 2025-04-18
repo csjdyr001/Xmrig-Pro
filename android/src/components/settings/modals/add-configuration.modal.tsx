@@ -85,9 +85,9 @@ const AddConfigurationsModal:React.FC<AddConfigurationsModalProps> = (
             showCharCounter
             maxLength={30}
             fieldStyle={styles.withUnderline}
-            hint="友好的配置名称"
+            hint="输入配置名称"
           />
-          <Text text85 $textNeutralLight marginT-10 marginB-15>Editor Mode</Text>
+          <Text text85 $textNeutralLight marginT-10 marginB-15>编辑模式</Text>
           <RadioGroup
             onValueChange={(value: ConfigurationMode) => setConfigMode(value)}
           >
