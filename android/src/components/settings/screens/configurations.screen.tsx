@@ -75,7 +75,7 @@ const ConfigurationsScreen: React.FC = () => {
         centerV
       >
         <View row centerV>
-          <Text text60>配置配置文件</Text>
+          <Text text60>配置文件</Text>
         </View>
         <Button
           size={Button.sizes.small}
