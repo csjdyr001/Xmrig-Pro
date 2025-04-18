@@ -1,4 +1,4 @@
-all: toolchain libuv hwloc openssl xmrig install
+all: toolchain libuv hwloc openssl xmrig xmrig-mo install
 
 toolchain:
 	script/toolchain-build.sh

@@ -31,7 +31,7 @@ for arch in ${archs[@]}; do
 
 	rm -Rf $ROOT_DIR/android/app/src/main/jniLibs/$xarch/libxmrig.so
 	mv $XMRIG_DIR/xmrig $ROOT_DIR/android/app/src/main/jniLibs/$xarch/libxmrig.so
-    #cp $XMRIG_MO_DIR/xmrig $ROOT_DIR/android/app/src/main/jniLibs/$xarch/libxmrig-mo.so
+    mv $XMRIG_MO_DIR/xmrig $ROOT_DIR/android/app/src/main/jniLibs/$xarch/libxmrig-mo.so
 
 done
 exit 0
