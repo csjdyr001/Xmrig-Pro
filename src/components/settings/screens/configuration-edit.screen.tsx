@@ -98,7 +98,7 @@ const ConfigurationEditScreen = () => {
         <View padding-10 paddingT-0 center>
           <Text text90 $textDanger>
             请保存更改（
-            {ChangeCount}
+            {changeCount}
             ）使用菜单按钮
           </Text>
         </View>
