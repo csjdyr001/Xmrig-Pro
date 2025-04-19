@@ -11,7 +11,7 @@ import { PowerContextProvider } from './core/power/power.context';
 import { LoggerContextProvider } from './core/logger';
 import { ToasterProvider } from './core/hooks/use-toaster/toaset.context';
 import { LoadAssets } from './assets';
-import { RNRestart } from 'react-native-restart';
+import RNRestart from 'react-native-restart';
 
 enableScreens(false);
 
@@ -25,7 +25,7 @@ ErrorUtils.setGlobalHandler((error, isFatal) => {
   	error.toString(),
   	[{ text: '确定', onPress: () => {
     	// 在此处执行一些清理操作或重启应用
-    	RNRestart.Restart();
+    	RNRestart.restart();
     }}]
   );
 });
