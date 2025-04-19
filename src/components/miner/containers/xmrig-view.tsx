@@ -266,7 +266,7 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
         },
         {
           renderCustomItem: () => (
-            <GridCard title="矿池余额（仅支持unmineable矿池）" text={poolBalance || 'N/A'}>
+            <GridCard title="矿池余额（仅支持unmineable矿池）" text={/*poolBalance || */'N/A'}>
               <Card.Image source={Assets.icons.biteCoin} height={30} width={30} style={{ position: 'absolute', right: 5, top: 5 }} tintColor={Colors.$iconNeutral} />
             </GridCard>
           ),
