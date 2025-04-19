@@ -19,6 +19,7 @@ import {
   predefinedPoolsList,
   SupportXMR,
   XMRPoolEU,
+  Unmineable,
 } from './pools';
 
 export type PoolListModalProps = Incubator.DialogProps & {
@@ -108,7 +109,7 @@ const PoolListModal:React.FC<PoolListModalProps> = (
 
           {poolInfo && (
             <View row paddingB-10 spread>
-              <Chip size={10} label={`${poolInfo.fee}% 费用`} />
+              <Chip size={10} label={`${poolInfo.fee}% 抽水`} />
               <Chip size={10} label={`${poolInfo.threshold} 分钟 支付`} marginH-10 />
               <Chip size={10} label={poolInfo.method} />
             </View>
@@ -131,6 +132,8 @@ const PoolListModal:React.FC<PoolListModalProps> = (
               && <HashVault onChange={onChange} /> }
             {selected && selected === PredefinedPoolName.Hashcity
               && <Hashcity onChange={onChange} /> }
+            {selected && selected === PredefinedPoolName.Unmineable
+              && <Unmineable onChange={onChange} /> }
           </View>
 
         </View>

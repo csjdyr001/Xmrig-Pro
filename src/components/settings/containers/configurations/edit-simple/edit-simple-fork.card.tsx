@@ -44,7 +44,7 @@ export const EditSimpleForkCard: React.FC<EditSimpleCardProps> = (
           <Icon source={Assets.icons.warning} tintColor={Colors.$textDanger} marginR-10 />
           <View>
             <Text text90L $textDanger textBreakStrategy="balanced" underline>
-              Warning: Benchmarking may stuck on some algos.
+              警告：基准测试可能会停留在一些算法上。
             </Text>
             <Text text100L $textDangerLight textBreakStrategy="balanced">
               您可以使用特定算法使用

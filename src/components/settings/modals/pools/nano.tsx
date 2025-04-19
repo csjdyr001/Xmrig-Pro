@@ -26,11 +26,11 @@ export const Nano:React.FC<IPool> = ({ onChange }) => {
   return (
     <>
       <Incubator.TextField
-        label="Wallet Address"
+        label="钱包地址"
         value={wallet}
         onChangeText={setWallet}
         validate={['required', (value: string) => validateWalletAddress(value)]}
-        validationMessage={['Required', 'Wallet validation failed']}
+        validationMessage={['必须', '钱包验证失败']}
         validateOnChange
         enableErrors
         floatOnFocus
@@ -44,7 +44,7 @@ export const Nano:React.FC<IPool> = ({ onChange }) => {
         textBreakStrategy="simple"
       />
       <Incubator.TextField
-        label="Worker Name"
+        label="工人名称"
         value={worker}
         onChangeText={setWorker}
         floatOnFocus
@@ -56,7 +56,7 @@ export const Nano:React.FC<IPool> = ({ onChange }) => {
         marginB-10
       />
       <Incubator.TextField
-        label="EMail"
+        label="邮箱"
         value={email}
         onChangeText={setEmail}
         floatOnFocus

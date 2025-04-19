@@ -44,7 +44,7 @@ export const EditSimpleCPUCard: React.FC<EditSimpleCardProps> = (
       <View spread padding-20 paddingT-10>
         <View marginB-10>
           <View row flex>
-            <Text text80 $textNeutralLight flex column marginB-5>Yield</Text>
+            <Text text80 $textNeutralLight flex column marginB-5>产量</Text>
             <Switch
               value={localState.properties?.cpu?.yield}
               onValueChange={(value) => setLocalState((oldState) => merge(
@@ -66,7 +66,7 @@ export const EditSimpleCPUCard: React.FC<EditSimpleCardProps> = (
         </View>
         <View flex paddingT-10>
           <View marginB-10>
-            <Text text80 $textNeutralLight flex row marginB-2>RandomX Mode</Text>
+            <Text text80 $textNeutralLight flex row marginB-2>RandomX模式</Text>
             <RadioGroup
               onValueChange={(value: RandomXMode) => setLocalState((oldState) => merge(
                 oldState,
@@ -88,14 +88,14 @@ export const EditSimpleCPUCard: React.FC<EditSimpleCardProps> = (
               </View>
             </RadioGroup>
             <Text text100 $textNeutralLight row>
-              Randomx挖掘模式：“自动”，“快速”（2 GB内存），
+              Randomx挖矿模式：“自动”，“快速”（2 GB内存），
               “轻松”（256 MB内存）。
             </Text>
           </View>
         </View>
         <View flex paddingT-10>
           <Incubator.TextField
-            placeholder="优先事项"
+            placeholder="优先级"
             floatingPlaceholder
             value={localState.properties?.cpu?.priority?.toString() || undefined}
             onChangeText={(text) => setLocalState((oldState) => merge(
@@ -165,12 +165,12 @@ export const EditSimpleCPUCard: React.FC<EditSimpleCardProps> = (
             fieldStyle={styles.withUnderline}
             hint="50"
             keyboardType="numeric"
-            trailingAccessory={<Text>% of device cores</Text>}
+            trailingAccessory={<Text>% 对于设备内核</Text>}
           />
           <Text text100 $textNeutralLight row>
-            For 1 core CPU this option has no effect,
-            for 2 core CPU only 2 values possible 50% and 100%,
-            for 4 cores: 25%, 50%, 75%, 100%. etc.
+            对于1个核心CPU，此选项无效，
+            对于2个核心CPU，只有2个值可能50％和100％，
+            对于4个核心：25％，50％，75％，100％ 等等。
           </Text>
         </View>
       </View>

@@ -23,7 +23,7 @@ export const Hashcity:React.FC<IPool> = ({ onChange }) => {
   return (
     <>
       <Incubator.TextField
-        label="Username"
+        label="用户名"
         value={username}
         onChangeText={setUsername}
         floatOnFocus
@@ -33,7 +33,7 @@ export const Hashcity:React.FC<IPool> = ({ onChange }) => {
         marginB-10
       />
       <Incubator.TextField
-        label="Worker Name"
+        label="工人名称"
         value={worker}
         onChangeText={setWorker}
         floatOnFocus

@@ -44,7 +44,7 @@ export const getConfigurationNameValidator = (names: string[]) => Joi
   .max(30)
   .custom((value, helper:Joi.CustomHelpers) => {
     if (names.includes(value)) {
-      return helper.message({ '*': 'Configuration name already exists' });
+      return helper.message({ '*': '配置名称已经存在' });
     }
     return value;
   })
