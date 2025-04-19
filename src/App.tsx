@@ -11,6 +11,7 @@ import { PowerContextProvider } from './core/power/power.context';
 import { LoggerContextProvider } from './core/logger';
 import { ToasterProvider } from './core/hooks/use-toaster/toaset.context';
 import { LoadAssets } from './assets';
+import { RNRestart } from 'react-native-restart';
 
 enableScreens(false);
 
@@ -18,12 +19,13 @@ enableScreens(false);
 ErrorUtils.setGlobalHandler((error, isFatal) => {
   // 打印错误信息
   console.log('Global error handler triggered');
-  console.log(error);
+  console.log(error.toString());
   Alert.alert(
   	'Xmrig Pro-报错',
   	error.message,
   	[{ text: '确定', onPress: () => {
     	// 在此处执行一些清理操作或重启应用
+    	RNRestart.Restart();
     }}]
   );
 });

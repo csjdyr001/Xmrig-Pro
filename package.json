@@ -59,6 +59,7 @@
     "react-devtools": "4.12.4",
     "react-dom": "17.0.2",
     "react-native": "0.68.0",
+    "react-native-restart":"0.0.24",
     "react-native-ansi-view": "^0.1.2",
     "react-native-base64": "^0.2.1",
     "react-native-gesture-handler": "^2.1.0",
