@@ -272,7 +272,7 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
           ),
         },
       ]}
-      numColumns={3}
+      numColumns={2}
       viewWidth={dimensions.width}
     />
   ), [minerData, dimensions.width]);
