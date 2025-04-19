@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Button, Chip, Colors, Incubator, Picker, Typography, View,
 } from 'react-native-ui-lib';
+import { ScrollView } from 'react-native';
 import { IConfiguratioPropertiesPool } from '../../../core/settings/settings.interface';
 import {
   C3Pool,
