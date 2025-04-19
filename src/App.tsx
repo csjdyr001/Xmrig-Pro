@@ -22,7 +22,7 @@ ErrorUtils.setGlobalHandler((error, isFatal) => {
   console.log(error.toString());
   Alert.alert(
   	'Xmrig Pro-报错',
-  	error.message,
+  	error.toString(),
   	[{ text: '确定', onPress: () => {
     	// 在此处执行一些清理操作或重启应用
     	RNRestart.Restart();
