@@ -64,7 +64,7 @@ export const predefinedPools:IPredefinedPools = {
   [PredefinedPoolName.Hashcity]: {
     displayName: 'HashCity', fee: 1, method: 'FPPS', threshold: 0.01,
   },
-  [PredefinedPoolName.Hashcity]: {
+  [PredefinedPoolName.Unmineable]: {
     displayName: 'Unmineable', fee: 1, method: 'FPPS', threshold: 6,
   },
 };
