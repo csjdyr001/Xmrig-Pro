@@ -42,11 +42,5 @@ public class MainActivity extends ReactActivity {
     batterFilters.addAction(Intent.ACTION_POWER_CONNECTED);
     batterFilters.addAction(Intent.ACTION_POWER_DISCONNECTED);
     registerReceiver(new PowerMonitorReceiver(), batterFilters);
-    
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-	builder.setTitle("Xmrig Pro");
-	builder.setMessage("该软件仅供交流学习，汉化By caofangkuai");
-	builder.setPositiveButton("确定", null);
-	builder.show();
   }
 }
