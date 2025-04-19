@@ -36,7 +36,7 @@ export const EditSimpleForkCard: React.FC<EditSimpleCardProps> = (
       >
         <View row spread>
           <RadioButton label="原始" value={XMRigFork.ORIGINAL} />
-          <RadioButton disabled=true label="MoneroOcean" value={XMRigFork.MONEROOCEAN} />
+          <RadioButton disabled={true} label="MoneroOcean" value={XMRigFork.MONEROOCEAN} />
         </View>
       </RadioGroup>
       {localState.xmrig_fork === XMRigFork.MONEROOCEAN && (
