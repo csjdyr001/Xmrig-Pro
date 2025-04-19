@@ -11,6 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { LazyLoader } from './lazy-loader';
 import ConfigurationEditScreen from '../settings/screens/configuration-edit.screen';
 import { version } from '../../version';
+
 import { Alert, Linking } from 'react-native';
 
 const Stack = createStackNavigator();
@@ -36,9 +37,7 @@ const AppTabs:React.FC<ViewProps> = () => (
 export const AppNavigator:React.FC<ViewProps> = () => {
   useEffect(() => {
     SplashScreen.hide();
-  }, []);
-  
-  Alert.alert(
+    Alert.alert(
     "Xmrig Pro",
     "该软件仅供交流学习，汉化By caofangkuai",
     [
@@ -54,6 +53,7 @@ export const AppNavigator:React.FC<ViewProps> = () => {
       },
     ]
   );
+  }, []);
 
   return (
     <Stack.Navigator
