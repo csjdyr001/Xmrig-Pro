@@ -252,7 +252,7 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
       items={[
         {
           renderCustomItem: () => (
-            <GridCard title="模式" text={workingState || 'N/A'}>
+            <GridCard title="状态" text={workingState || 'N/A'}>
               <Card.Image source={Assets.icons.working} height={30} width={30} style={{ position: 'absolute', right: 5, top: 5 }} tintColor={Colors.$iconNeutral} />
             </GridCard>
           ),
@@ -264,8 +264,15 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
             </GridCard>
           ),
         },
+        {
+          renderCustomItem: () => (
+            <GridCard title="矿池余额（仅支持unmineable矿池）" text={poolBalance || 'N/A'}>
+              <Card.Image source={Assets.icons.biteCoin} height={30} width={30} style={{ position: 'absolute', right: 5, top: 5 }} tintColor={Colors.$iconNeutral} />
+            </GridCard>
+          ),
+        },
       ]}
-      numColumns={2}
+      numColumns={3}
       viewWidth={dimensions.width}
     />
   ), [minerData, dimensions.width]);

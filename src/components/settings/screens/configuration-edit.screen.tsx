@@ -173,23 +173,6 @@ const ConfigurationEditScreen = () => {
             tintColor: Colors.$iconDefaultLight,
           },
         }}
-        tertiaryButton={{
-          size: Button.sizes.medium,
-          label: '切换到JSON高级模式',
-          onPress: () => {
-            
-          },
-          backgroundColor: Colors.$backgroundDangerHeavy,
-          link: false,
-          animateLayout: true,
-          iconSource: Assets.icons.working,
-          iconStyle: {
-            display: 'flex',
-            width: 16,
-            height: 20,
-            tintColor: Colors.$iconDefaultLight,
-          },
-        }}
       />
     </View>
   );

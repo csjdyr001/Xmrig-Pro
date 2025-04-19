@@ -17,5 +17,6 @@ export const LoadAssets = () => {
     working: require('./icons/terminal.png'),
     save: require('./icons/save.png'),
     warning: require('./icons/warning.png'),
+    biteCoin: require('./icons/bitecoin.png'),
   });
 };
