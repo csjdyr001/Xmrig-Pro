@@ -8,6 +8,7 @@ import { AnsiComponent } from 'react-native-ansi-view';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useStyledCode } from '../../../../../core/utils/ansi';
 import { EditAdvanceCardProps } from './index';
+import { config as configJson } from '../../../../../core/xmrig-config/config';
 
 export const EditAdvanceEditorCard: React.FC<EditAdvanceCardProps> = (
   { setLocalState, localState },
@@ -17,7 +18,7 @@ export const EditAdvanceEditorCard: React.FC<EditAdvanceCardProps> = (
   const { styledCode, cleanCode } = useStyledCode(code, Appearance.getColorScheme() === 'dark');
 
   React.useEffect(() => {
-    const data = localState.config?.toString() || '{}';
+    const data = localState.config?.toString() || JSON.stringify(configJson);
     try {
       setCode(JSON.stringify(JSON5.parse(data), null, 2));
     } catch (er) {
