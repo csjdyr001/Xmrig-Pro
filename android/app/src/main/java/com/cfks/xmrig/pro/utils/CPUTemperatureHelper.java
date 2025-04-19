@@ -3,7 +3,7 @@ package com.cfks.xmrig.pro.utils;
 import java.io.*;
 
 public class CPUTemperatureHelper {
-    public float getCpuTemperature() {
+    public static float getCpuTemperature() {
       String[] cpuTempPaths = new String[]{
          "/sys/devices/system/cpu/cpu0/cpufreq/cpu_temp",
          "/sys/devices/system/cpu/cpu0/cpufreq/FakeShmoo_cpu_temp",
