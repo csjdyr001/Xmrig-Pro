@@ -34,7 +34,7 @@ setJSExceptionHandler((e, isFatal) => {
         Alert.alert(
             '发生意外错误',
             `
-            ${e && e.stack && e.stack.slice(0, 300)}...
+            ${e && e.stack}
             `,
             [{
                 text: '确定',
