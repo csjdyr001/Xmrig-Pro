@@ -1,6 +1,6 @@
 # Xmrig Pro
 
-根据Oppo9008存储库进行了修改并汉化。
+根据OPPO9008存储库进行了修改并汉化。
 删除了XMRIG的默认为1％捐赠。
 
 [![BuildAll](https://github.com/csjdyr001/Xmrig-Pro/actions/workflows/build-all.yml/badge.svg)](https://github.com/csjdyr001/Xmrig-Pro/actions/workflows/build-all.yml)
