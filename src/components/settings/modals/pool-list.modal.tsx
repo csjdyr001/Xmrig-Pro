@@ -116,6 +116,7 @@ const PoolListModal:React.FC<PoolListModalProps> = (
           )}
 
           <View spread paddingB-20>
+            <ScrollView>
             {selected && selected === PredefinedPoolName.MoneroOcean
               && <MoneroOcean onChange={onChange} />}
             {selected && selected === PredefinedPoolName.MineXMR
@@ -134,6 +135,7 @@ const PoolListModal:React.FC<PoolListModalProps> = (
               && <Hashcity onChange={onChange} /> }
             {selected && selected === PredefinedPoolName.Unmineable
               && <Unmineable onChange={onChange} /> }
+            </ScrollView>
           </View>
 
         </View>
