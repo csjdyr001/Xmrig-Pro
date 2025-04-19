@@ -37,7 +37,6 @@ const AppTabs:React.FC<ViewProps> = () => (
 export const AppNavigator:React.FC<ViewProps> = () => {
   useEffect(() => {
     SplashScreen.hide();
-    /*
     Alert.alert(
     "Xmrig Pro",
     "该软件仅供交流学习，汉化By caofangkuai",
@@ -54,7 +53,6 @@ export const AppNavigator:React.FC<ViewProps> = () => {
       },
     ]
   );
-  */
   }, []);
 
   return (
