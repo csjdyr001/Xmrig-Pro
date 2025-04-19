@@ -7,7 +7,7 @@ import { ConfigurationsListView } from '../containers/configurations/list-view';
 import AddConfigurationsModal from '../modals/add-configuration.modal';
 
 const actionsButtonDefault: ButtonProps = {
-  label: 'Menu',
+  label: '菜单',
   iconSource: Assets.icons.barsOpen,
   iconStyle: {
     width: 22,

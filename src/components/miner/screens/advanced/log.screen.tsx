@@ -18,7 +18,7 @@ import { ILoggerLine, LoggerActionType, LoggerContext } from '../../../../core/l
 import { useToaster } from '../../../../core/hooks/use-toaster/use-toaster.hook';
 
 const actionsButtonDefault: ButtonProps = {
-  label: 'Menu',
+  label: '菜单',
   iconSource: Assets.icons.barsOpen,
   iconStyle: {
     width: 22,

@@ -12,7 +12,7 @@ const SettingsThermalCard = React.lazy(() => import('../containers/settings/sett
 const SettingsOthersCard = React.lazy(() => import('../containers/settings/settings-others.card'));
 
 const actionsButtonDefault: ButtonProps = {
-  label: 'Menu',
+  label: '菜单',
   iconSource: Assets.icons.barsOpen,
   iconStyle: {
     width: 22,
