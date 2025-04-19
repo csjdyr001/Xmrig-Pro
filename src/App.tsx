@@ -1,6 +1,6 @@
 import React from 'react';
 import { Colors, LoaderScreen } from 'react-native-ui-lib';
-import { SafeAreaView, LogBox } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context';
 import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
@@ -13,8 +13,6 @@ import { ToasterProvider } from './core/hooks/use-toaster/toaset.context';
 import { LoadAssets } from './assets';
 
 enableScreens(false);
-
-LogBox.ignoreAllLogs(false); // 启用红屏但不崩溃
 
 const AppWithSettings:React.FC = () => {
   React.useEffect(() => {
