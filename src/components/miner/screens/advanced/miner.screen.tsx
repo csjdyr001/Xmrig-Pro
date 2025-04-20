@@ -10,7 +10,7 @@ import { PowerContext } from '../../../../core/power/power.context';
 
 const MinerScreen = () => {
   const {
-    workingState, minerData, hashrateTotals, CPUTemp, poolBalance
+    workingState, minerData, hashrateTotals, CPUTemp, /*poolBalance*/
   } = React.useContext(SessionDataContext);
   const powerContext = React.useContext(PowerContext);
 
