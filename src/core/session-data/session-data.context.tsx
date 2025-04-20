@@ -1,6 +1,6 @@
 import React from 'react';
 import { Incubator } from 'react-native-ui-lib';
-import { NativeModules, NativeEventEmitter, EmitterSubscription } from 'react-native';
+import { NativeModules, NativeEventEmitter, EmitterSubscription, Alert } from 'react-native';
 import { useHashrateHistory } from '../hooks';
 import {
   StartMode, IXMRigLogEvent, WorkingState, IHashrateHistory,
@@ -52,16 +52,31 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   
   //unmineable矿池余额
   let poolBalanceNumber1 = "0.0Ð";
+  try{
   const cConfig:Configuration | undefined = settings.configurations.find(
-        (config) => config.id === settings.selectedConfiguration,
-      );
-      if (cConfig) {
-        const sConfig = ConfigBuilder.build(cConfig);
-        if (sConfig) {
-        	let configJSON = JSON5.parse(sConfig.getConfigString());
-        	poolBalanceNumber1 = configJSON.pools.user;
-        }
-      }
+  	(config) => config.id === settings.selectedConfiguration,
+  );
+  if (cConfig) {
+  	const sConfig = ConfigBuilder.build(cConfig);
+    if (sConfig) {
+    	//poolBalanceNumber1 = JSON.parse(sConfig.getConfigString()).pools.user;
+    }
+  }
+  }catch(e){
+  	console.log(e);
+  	Alert.alert(
+            '发生意外错误',
+            `
+            ${e && e.stack}
+            `,
+            [{
+                text: '确定',
+                onPress: () => {
+                    //console.log('ok')
+                }
+            }]
+        )
+  }
   const { poolBalanceNumber } = poolBalanceNumber1;
 
   // backward compability
