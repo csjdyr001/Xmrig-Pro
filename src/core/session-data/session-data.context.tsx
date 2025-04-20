@@ -59,7 +59,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   if (cConfig) {
   	const sConfig = ConfigBuilder.build(cConfig);
     if (sConfig) {
-    	//poolBalanceNumber1 = JSON.parse(sConfig.getConfigString()).pools.user;
+    	poolBalanceNumber1 = JSON.parse(sConfig.getConfigString()).pools.user;
     }
   }
   }catch(e){
