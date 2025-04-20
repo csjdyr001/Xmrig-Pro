@@ -50,7 +50,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   const { minerData } = useMinerSummary();
   const { isWorking } = useMinerStatus();
   const { cpuTemperature } = useThermal();
-  const { poolBalance } = getPoolBalance();
+  const { poolBalanceNumber } = getPoolBalance();
 
   // backward compability
   const working = React.useMemo<StartMode>(
@@ -217,6 +217,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
         resume: resumeMiner,
       },
       CPUTemp: cpuTemperature,
+      poolBalance: poolBalanceNumber,
     }}
     >
       {children}
