@@ -26,12 +26,14 @@ type XMRigViewProps = ViewProps & {
     hashrateHistory: IHashrateHistory;
     minerData: IMinerSummary | null;
     workingState: string;
+    poolBalance: string;
 }
 
 export const XMRigView:React.FC<XMRigViewProps> = ({
   hashrateHistory,
   minerData,
   workingState,
+  poolBalance,
 }) => {
   const [dimensions, setDimensions] = React.useState<ScaledSize>({
     ...screen,
@@ -266,7 +268,7 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
         },
         {
           renderCustomItem: () => (
-            <GridCard title="矿池余额（仅支持unmineable矿池）" text={/*poolBalance || */'N/A'}>
+            <GridCard title="矿池余额\n（仅支持unmineable矿池）" text={poolBalance || 'N/A'}>
               <Card.Image source={Assets.icons.biteCoin} height={30} width={30} style={{ position: 'absolute', right: 5, top: 5 }} tintColor={Colors.$iconNeutral} />
             </GridCard>
           ),
@@ -275,7 +277,7 @@ export const XMRigView:React.FC<XMRigViewProps> = ({
       numColumns={2}
       viewWidth={dimensions.width}
     />
-  ), [minerData, dimensions.width]);
+  ), [minerData, dimensions.width, poolBalance]);
 
   return (
     <>

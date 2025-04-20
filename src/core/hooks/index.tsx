@@ -8,6 +8,7 @@ export {
 
 export {
   useMiner,
+  getPoolBalance,
 } from './use-miner.hook';
 
 export {

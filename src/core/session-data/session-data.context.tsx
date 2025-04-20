@@ -14,6 +14,7 @@ import { IMinerSummary, useMinerSummary } from '../hooks/use-miner-summary.hook'
 import { useMinerStatus } from '../hooks/use-miner-status.hook';
 import { useThermal } from '../hooks/use-thermal.hook';
 import { useToaster } from '../hooks/use-toaster/use-toaster.hook';
+import { getPoolBalance } from '../hooks/use-miner.hook';
 
 const { XMRigForAndroid } = NativeModules;
 
@@ -27,6 +28,7 @@ type SessionDataContextType = {
     resume: () => {},
   },
   CPUTemp: number,
+  poolBalance: string,
 }
 
 // @ts-ignore
@@ -48,6 +50,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   const { minerData } = useMinerSummary();
   const { isWorking } = useMinerStatus();
   const { cpuTemperature } = useThermal();
+  const { poolBalance } = getPoolBalance();
 
   // backward compability
   const working = React.useMemo<StartMode>(

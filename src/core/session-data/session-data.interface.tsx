@@ -4,9 +4,9 @@ export enum StartMode {
 }
 
 export enum WorkingState {
-    NOT_WORKING = 'Not Working',
-    MINING = 'Mining',
-    PAUSED = 'Paused',
+    NOT_WORKING = '未工作',
+    MINING = '挖矿中',
+    PAUSED = '暂停',
 }
 
 export interface IXMRigLogEvent {

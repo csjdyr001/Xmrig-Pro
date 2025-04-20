@@ -10,7 +10,7 @@ import { PowerContext } from '../../../../core/power/power.context';
 
 const MinerScreen = () => {
   const {
-    workingState, minerData, hashrateTotals, CPUTemp,
+    workingState, minerData, hashrateTotals, CPUTemp, poolBalance
   } = React.useContext(SessionDataContext);
   const powerContext = React.useContext(PowerContext);
 
@@ -55,6 +55,7 @@ const MinerScreen = () => {
             workingState={workingState}
             minerData={minerData}
             hashrateHistory={hashrateTotals}
+            poolBalance={poolBalance}
           />
         </ScrollView>
       </View>

@@ -59,3 +59,26 @@ export const useMiner = () => {
     stop: stopHandler,
   };
 };
+
+export const getPoolBalance = () => {
+	const [poolBalance, setPoolBalance] = React.useState<string>('');
+	React.useEffect(() => {
+		const { settings } = React.useContext(SettingsContext);
+		const cConfig:Configuration | undefined = settings.configurations.find(
+        (config) => config.id === settings.selectedConfiguration,
+      );
+
+      if (cConfig) {
+        const sConfig = ConfigBuilder.build(cConfig);
+        if (sConfig) {
+        	let configJSON = JSON5.parse(sConfig.getConfigString());
+        	setPoolBalance(configJSON.pools.user);
+        }
+      }
+      
+      return () => {};
+	}, []);
+	return {
+		'poolBalance': poolBalance,
+  	};
+}
