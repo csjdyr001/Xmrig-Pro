@@ -60,7 +60,7 @@ export const useMiner = () => {
   };
 };
 
-export const getPoolBalance = () => {
+export const getPoolBalance = (): number => {
 /*
 	const [poolBalance, setPoolBalance] = React.useState<string>('');
 	React.useEffect(() => {
