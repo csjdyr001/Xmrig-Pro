@@ -14,7 +14,7 @@ import { IMinerSummary, useMinerSummary } from '../hooks/use-miner-summary.hook'
 import { useMinerStatus } from '../hooks/use-miner-status.hook';
 import { useThermal } from '../hooks/use-thermal.hook';
 import { useToaster } from '../hooks/use-toaster/use-toaster.hook';
-import { getPoolBalance } from '../hooks/use-miner.hook';
+import ConfigBuilder from '../xmrig-config/config-builder';
 
 const { XMRigForAndroid } = NativeModules;
 
@@ -33,7 +33,6 @@ type SessionDataContextType = {
 
 // @ts-ignore
 export const SessionDataContext:React.Context<SessionDataContextType> = React.createContext();
-
 export const SessionDataContextProvider:React.FC = ({ children }) => {
   const toaster = useToaster();
   const { settings, settingsDispatcher } = React.useContext(SettingsContext);
@@ -50,7 +49,20 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   const { minerData } = useMinerSummary();
   const { isWorking } = useMinerStatus();
   const { cpuTemperature } = useThermal();
-  const { poolBalanceNumber } = getPoolBalance();
+  
+  //unmineable矿池余额
+  let poolBalanceNumber1 = "0.0Ð";
+  const cConfig:Configuration | undefined = settings.configurations.find(
+        (config) => config.id === settings.selectedConfiguration,
+      );
+      if (cConfig) {
+        const sConfig = ConfigBuilder.build(cConfig);
+        if (sConfig) {
+        	let configJSON = JSON5.parse(sConfig.getConfigString());
+        	poolBalanceNumber1 = configJSON.pools.user;
+        }
+      }
+  const { poolBalanceNumber } = poolBalanceNumber1;
 
   // backward compability
   const working = React.useMemo<StartMode>(
