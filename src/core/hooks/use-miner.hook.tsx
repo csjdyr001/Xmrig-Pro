@@ -65,6 +65,7 @@ export const getPoolBalance = () => {
 	const [poolBalance, setPoolBalance] = React.useState<string>('');
 	React.useEffect(() => {
 	*/
+	/*
 		const { settings } = React.useContext(SettingsContext);
 		const cConfig:Configuration | undefined = settings.configurations.find(
         (config) => config.id === settings.selectedConfiguration,
@@ -77,6 +78,7 @@ export const getPoolBalance = () => {
         	return configJSON.pools.user;
         }
       }
+      */
       /*
       return () => {};
 	}, []);
