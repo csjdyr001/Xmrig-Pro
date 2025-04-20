@@ -78,7 +78,5 @@ export const getPoolBalance = () => {
       
       return () => {};
 	}, []);
-	return {
-		'poolBalance': poolBalance,
-  	};
+	return poolBalance;
 }
