@@ -64,6 +64,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   }
   }catch(e){
   	console.log(e);
+	poolBalanceNumber1 = "0.0Ð";
   	Alert.alert(
             '发生意外错误',
             `
