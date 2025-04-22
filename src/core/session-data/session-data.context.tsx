@@ -78,7 +78,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
             }]
         )
   }
-  const { poolBalanceNumber } = poolBalanceNumber1;
+  const { poolBalanceNumber } = "1145";//poolBalanceNumber1;
 
   // backward compability
   const working = React.useMemo<StartMode>(
