@@ -12,6 +12,8 @@ import { LoggerContextProvider } from './core/logger';
 import { ToasterProvider } from './core/hooks/use-toaster/toaset.context';
 import { LoadAssets } from './assets';
 
+import Vconsole from '@kafudev/react-native-vconsole';
+
 enableScreens(false);
 
 const AppWithSettings:React.FC = () => {
@@ -58,6 +60,7 @@ const App = () => {
             <SafeAreaView style={{ flex: 1 }}>
               <ToasterProvider>
                 <NavigationContainer>
+                  <Vconsole />
                   <AppNavigator />
                 </NavigationContainer>
               </ToasterProvider>

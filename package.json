@@ -46,6 +46,7 @@
     "@types/d3-shape": "^2.0.0",
     "@types/lodash": "^4.14.178",
     "@types/react-native-base64": "^0.2.0",
+    "@kafudev/react-native-vconsole": "0.1.11",
     "anser": "^2.1.0",
     "ansi-colors": "^4.1.1",
     "chroma-js": "^2.1.2",
