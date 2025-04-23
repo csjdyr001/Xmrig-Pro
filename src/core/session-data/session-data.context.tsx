@@ -50,15 +50,29 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   const { cpuTemperature } = useThermal();
   
   //unmineable矿池余额
-  let poolBalanceNumber1 = "0.0Ð";
+  let poolBalanceValue = "N/A";
+  refreshPoolBalance();
+  React.useEffect(() => {
+  	refreshPoolBalance();
+  }, [settings]);
+  setInterval(() => {
+  	refreshPoolBalance();
+  }, 10000);//10秒刷新一次
+  
+  const refreshPoolBalance = () => {
   const cConfig:Configuration | undefined = settings.configurations.find(
   	(config) => config.id === settings.selectedConfiguration,
   );
   if (cConfig) {
-    //poolBalanceNumber1 = cConfig.config?.pools?.user;
+    poolBalanceValue = cConfig.config.pools.user || "N/A";
+    if(poolBalanceValue != "N/A"){
+    	//获取余额
+    }
+  }else{
+  	poolBalanceValue = "未选择配置";
   }
-  const poolBalanceValue = poolBalanceNumber1;
-
+  }
+  
   // backward compability
   const working = React.useMemo<StartMode>(
     () => {
@@ -148,7 +162,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   React.useEffect(() => {
     if (isLowBattery) {
       toaster({
-        message: 'Battery is low',
+        message: '电池很低',
         position: 'top',
         preset: Incubator.ToastPresets.FAILURE,
       });
@@ -163,13 +177,13 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   React.useEffect(() => {
     if (!isPowerConnected) {
       toaster({
-        message: 'Charger is disconnected',
+        message: '充电器已断开连接',
         position: 'top',
         preset: Incubator.ToastPresets.FAILURE,
       });
     } else {
       toaster({
-        message: 'Charger is connected',
+        message: '充电器已连接',
         position: 'top',
         preset: Incubator.ToastPresets.SUCCESS,
       });
