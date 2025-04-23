@@ -64,7 +64,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   	(config) => config.id === settings.selectedConfiguration,
   );
   if (cConfig) {
-    poolBalanceValue = cConfig.config.pools.user || "N/A";
+    poolBalanceValue = cConfig.config?.pools?.user || "N/A";
     if(poolBalanceValue != "N/A"){
     	//获取余额
     }
