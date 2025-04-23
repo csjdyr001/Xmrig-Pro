@@ -55,7 +55,7 @@ const MinerScreen = () => {
             workingState={workingState}
             minerData={minerData}
             hashrateHistory={hashrateTotals}
-            poolBalance={poolBalance || "1919180"}
+            poolBalance={poolBalance}
           />
         </ScrollView>
       </View>

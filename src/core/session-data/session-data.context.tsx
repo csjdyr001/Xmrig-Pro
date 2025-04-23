@@ -14,7 +14,6 @@ import { IMinerSummary, useMinerSummary } from '../hooks/use-miner-summary.hook'
 import { useMinerStatus } from '../hooks/use-miner-status.hook';
 import { useThermal } from '../hooks/use-thermal.hook';
 import { useToaster } from '../hooks/use-toaster/use-toaster.hook';
-import ConfigBuilder from '../xmrig-config/config-builder';
 
 const { XMRigForAndroid } = NativeModules;
 
@@ -52,33 +51,13 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   
   //unmineable矿池余额
   let poolBalanceNumber1 = "0.0Ð";
-  try{
   const cConfig:Configuration | undefined = settings.configurations.find(
   	(config) => config.id === settings.selectedConfiguration,
   );
   if (cConfig) {
-  	const sConfig = ConfigBuilder.build(cConfig);
-    if (sConfig) {
-    	poolBalanceNumber1 = sConfig.getConfigString();//JSON.parse(sConfig.getConfigString()).pools.user;
-    }
+    //poolBalanceNumber1 = cConfig.config?.pools?.user;
   }
-  }catch(e){
-  	console.log(e);
-	poolBalanceNumber1 = "0.0Ð";
-  	Alert.alert(
-            '发生意外错误',
-            `
-            ${e && e.stack}
-            `,
-            [{
-                text: '确定',
-                onPress: () => {
-                    //console.log('ok')
-                }
-            }]
-        )
-  }
-  const { poolBalance } = "1145";//poolBalanceNumber1;
+  const poolBalanceValue = poolBalanceNumber1;
 
   // backward compability
   const working = React.useMemo<StartMode>(
@@ -245,7 +224,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
         resume: resumeMiner,
       },
       CPUTemp: cpuTemperature,
-      poolBalance,
+      poolBalance: poolBalanceValue,
     }}
     >
       {children}
