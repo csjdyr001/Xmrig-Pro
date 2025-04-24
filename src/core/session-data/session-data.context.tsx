@@ -64,9 +64,13 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   	(config) => config.id === settings.selectedConfiguration,
   );
   if (cConfig) {
+    if(cConfig.config){
     poolBalanceValue = JSON5.parse(cConfig.config).pools?.user || "N/A";
     if(poolBalanceValue != "N/A"){
     	//获取余额
+    }
+    }else{
+      poolBalanceValue = "配置解析错误";
     }
   }else{
   	poolBalanceValue = "未选择配置";
@@ -162,7 +166,7 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   React.useEffect(() => {
     if (isLowBattery) {
       toaster({
-        message: '电池很低',
+        message: '电量很低',
         position: 'top',
         preset: Incubator.ToastPresets.FAILURE,
       });
