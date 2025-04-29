@@ -60,6 +60,7 @@ const SettingsOthersCard:React.FC<SettingsCardProps<ISettings>> = ({
               minimumValue={0}
               maximumValue={100}
               step={1}
+              disabled={true}
               value={settings.donation}
               onValueChange={
               (value) => debouncedUpdate({ donation: value })
