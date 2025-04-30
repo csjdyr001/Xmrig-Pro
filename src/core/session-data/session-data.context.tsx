@@ -49,6 +49,26 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   const { isWorking } = useMinerStatus();
   const { cpuTemperature } = useThermal();
   
+  const refreshPoolBalance = () => {
+  const cConfig:Configuration | undefined = settings.configurations.find(
+  	(config) => config.id === settings.selectedConfiguration,
+  );
+  if (cConfig) {
+    /*
+    if(cConfig.config){
+    poolBalanceValue = JSON5.parse(cConfig.config).pools?.user || "N/A";
+    if(poolBalanceValue != "N/A"){
+    	//获取余额
+    }
+    }else{
+      poolBalanceValue = "配置解析错误";
+    }
+    */
+  }else{
+  	poolBalanceValue = "未选择配置";
+  }
+  }
+
   //unmineable矿池余额
   let poolBalanceValue = "N/A";
   refreshPoolBalance();
@@ -58,24 +78,6 @@ export const SessionDataContextProvider:React.FC = ({ children }) => {
   setInterval(() => {
   	refreshPoolBalance();
   }, 10000);//10秒刷新一次
-  
-  const refreshPoolBalance = () => {
-  const cConfig:Configuration | undefined = settings.configurations.find(
-  	(config) => config.id === settings.selectedConfiguration,
-  );
-  if (cConfig) {
-    if(cConfig.config){
-    //poolBalanceValue = JSON5.parse(cConfig.config).pools?.user || "N/A";
-    if(poolBalanceValue != "N/A"){
-    	//获取余额
-    }
-    }else{
-      poolBalanceValue = "配置解析错误";
-    }
-  }else{
-  	poolBalanceValue = "未选择配置";
-  }
-  }
   
   // backward compability
   const working = React.useMemo<StartMode>(
